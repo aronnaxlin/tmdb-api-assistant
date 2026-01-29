@@ -1,0 +1,21 @@
+{
+  "name": "tmdb-api-assistant",
+  "version": "1.0.0",
+  "description": "TMDB 助手 - EMBY 文件重命名工具",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "tmdb",
+    "emby",
+    "rename",
+    "movie",
+    "tv"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^34.0.0"
+  }
+}
