@@ -1,41 +1,69 @@
 # TMDB 助手 - EMBY 文件重命名工具
 
-一个纯前端的 TMDB (The Movie Database) 查询助手，专为 EMBY 媒体库文件重命名而设计。
+一个基于 Vercel Serverless 的 TMDB (The Movie Database) 查询助手，专为 EMBY 媒体库文件重命名而设计。
 
-**✨ 已集成 Vercel Serverless 后端，开箱即用，无需配置 API Token！**
+**✨ GitHub + Vercel 自动部署，开箱即用，无需配置 API Token！**
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/你的用户名/tmdb-api-assistant)
 
 ---
 
-## 功能特性
+## 🌟 功能特性
 
 - 🔍 **多语言搜索**：支持简体中文、繁体中文、英语、日语的影视作品搜索
 - 🎬 **电影与电视剧支持**：查询电影和电视剧的完整信息
 - 📋 **快速复制命名格式**：一键复制符合 EMBY 规范的文件/文件夹命名
 - 🌐 **多语言命名**：同时显示多种语言的标准命名格式
 - 📺 **分季信息**：完整显示电视剧的所有季度信息
-- 🎨 **Material You 设计**：采用 Google Material Design 3 (Blue Aesthetic) 设计风格
-- 🚀 **Serverless 架构**：基于 Vercel，无需用户配置，开箱即用
+- 🎨 **Material Design 3**：采用 Google Material You (Blue Aesthetic) 设计风格
+- 🚀 **自动 CI/CD**：推送代码到 GitHub 自动部署
+- 🔒 **安全**：API Token 隐藏在服务器端
 
 ---
 
-## 快速开始
+## 🚀 快速部署（5分钟）
 
-### 在线使用
+### 方式 1: 一键部署（推荐）
 
-直接访问已部署的网站（部署后填入链接），无需任何配置！
+1. 点击上方的 **Deploy with Vercel** 按钮
+2. 使用 GitHub 登录 Vercel
+3. 配置环境变量 `TMDB_API_TOKEN`（[获取方式](https://www.themoviedb.org/settings/api)）
+4. 点击 Deploy
 
-### 本地开发
+完成！访问 Vercel 提供的域名即可使用。
+
+### 方式 2: 手动部署
+
+详见 [📖 快速开始指南 (QUICKSTART.md)](QUICKSTART.md)
+
+### 方式 3: Fork 后部署
+
+1. Fork 本仓库
+2. 在 [Vercel](https://vercel.com/new) 导入你的仓库
+3. 配置环境变量 `TMDB_API_TOKEN`
+4. 部署完成
+
+---
+
+## 📖 文档
+
+- 🚀 [快速开始](QUICKSTART.md) - 5分钟部署指南
+- 📚 [完整部署文档](DEPLOY.md) - 详细部署步骤、工作流程、常见问题
+
+---
+
+## 💻 本地开发
 
 ```bash
 # 克隆项目
-git clone <your-repo-url>
+git clone https://github.com/你的用户名/tmdb-api-assistant.git
 cd tmdb-api-assistant
 
 # 配置环境变量
 cp .env.example .env
 # 编辑 .env 文件，填入你的 TMDB API Token
 
-# 安装 Vercel CLI
+# 安装 Vercel CLI（首次）
 npm install -g vercel
 
 # 启动本地开发服务器
@@ -46,26 +74,30 @@ vercel dev
 
 ---
 
-## 部署到 Vercel
+## 🔄 自动部署流程
 
-详细部署步骤请查看 [DEPLOY.md](DEPLOY.md)
+推送代码到 GitHub 后，Vercel 会自动：
 
-**快速部署：**
+1. ✅ 检测代码变化
+2. ✅ 自动构建和部署
+3. ✅ 运行 Serverless Functions
+4. ✅ 更新生产环境
 
 ```bash
-# 安装 Vercel CLI
-npm install -g vercel
-
-# 部署
-vercel
-
-# 配置环境变量 TMDB_API_TOKEN
-# 在 Vercel Dashboard 中添加
+# 日常更新流程
+git add .
+git commit -m "更新说明"
+git push origin main  # 自动部署到生产环境
 ```
+
+**分支策略**：
+- `main` 分支 → 自动部署到生产环境
+- 其他分支 → 自动创建预览部署
+- Pull Request → 独立预览环境
 
 ---
 
-## 使用方法
+## 📋 使用说明
 
 ### 1. 搜索影视作品
 
