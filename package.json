@@ -1,6 +1,7 @@
 {
   "name": "tmdb-api-assistant",
   "version": "1.0.0",
+  "type": "module",
   "description": "TMDB 助手 - EMBY 文件重命名工具",
   "scripts": {
     "dev": "vercel dev",
