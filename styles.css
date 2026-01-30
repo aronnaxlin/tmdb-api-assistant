@@ -455,7 +455,7 @@ body {
 }
 
 .copy-btn {
-    padding: 8px 16px;
+    padding: 8px;
     background: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
     border: none;
@@ -463,13 +463,19 @@ body {
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    font-size: 12px;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
     transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
 }
 
 .copy-btn:hover {
     background: #1557B0;
+}
+
+.copy-btn .material-icons {
+    line-height: 1;
 }
 
 /* 加载指示器 */
@@ -639,7 +645,7 @@ body {
     .result-poster {
         width: 100%;
         height: auto;
-        max-width: 200px;
+        max-width: 120px;
         margin: 0 auto;
         aspect-ratio: 2/3;
         border-radius: 8px;
@@ -672,7 +678,7 @@ body {
 
     .detail-poster {
         width: 100%;
-        max-width: 250px;
+        max-width: 180px;
         margin: 0 auto;
         border-radius: 12px;
     }
@@ -788,11 +794,11 @@ body {
     }
 
     .result-poster {
-        max-width: 160px;
+        max-width: 100px;
     }
 
     .detail-poster {
-        max-width: 200px;
+        max-width: 140px;
     }
 }
 

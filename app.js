@@ -261,9 +261,8 @@ class TMDBAssistant {
                         return `
                             <div class="rename-example">
                                 <span><strong>${langName}:</strong> ${name} (${year})</span>
-                                <button class="copy-btn" onclick="copyToClipboard('${this.escapeHtml(name)} (${year})')">
-                                    <span class="material-icons" style="font-size: 14px;">content_copy</span>
-                                    复制
+                                <button class="copy-btn" onclick="copyToClipboard('${this.escapeHtml(name)} (${year})')" title="复制">
+                                    <span class="material-icons" style="font-size: 18px;">content_copy</span>
                                 </button>
                             </div>
                         `;
@@ -272,9 +271,8 @@ class TMDBAssistant {
 
                     <div class="rename-example">
                         <span><strong>带 TMDB ID:</strong> ${names["zh-CN"]} (${year})[tmdbid-${details.id}]</span>
-                        <button class="copy-btn" onclick="copyToClipboard('${this.escapeHtml(names["zh-CN"])} (${year})[tmdbid-${details.id}]')">
-                            <span class="material-icons" style="font-size: 14px;">content_copy</span>
-                            复制
+                        <button class="copy-btn" onclick="copyToClipboard('${this.escapeHtml(names["zh-CN"])} (${year})[tmdbid-${details.id}]')" title="复制">
+                            <span class="material-icons" style="font-size: 18px;">content_copy</span>
                         </button>
                     </div>
                 </div>
@@ -294,9 +292,8 @@ class TMDBAssistant {
                         return `
                             <div class="rename-example">
                                 <span><strong>${langName}:</strong> ${name} (${year})</span>
-                                <button class="copy-btn" onclick="copyToClipboard('${this.escapeHtml(name)} (${year})')">
-                                    <span class="material-icons" style="font-size: 14px;">content_copy</span>
-                                    复制
+                                <button class="copy-btn" onclick="copyToClipboard('${this.escapeHtml(name)} (${year})')" title="复制">
+                                    <span class="material-icons" style="font-size: 18px;">content_copy</span>
                                 </button>
                             </div>
                         `;
@@ -305,9 +302,8 @@ class TMDBAssistant {
 
                     <div class="rename-example">
                         <span><strong>带 TMDB ID:</strong> ${names["zh-CN"]} (${year})[tmdbid-${details.id}]</span>
-                        <button class="copy-btn" onclick="copyToClipboard('${this.escapeHtml(names["zh-CN"])} (${year})[tmdbid-${details.id}]')">
-                            <span class="material-icons" style="font-size: 14px;">content_copy</span>
-                            复制
+                        <button class="copy-btn" onclick="copyToClipboard('${this.escapeHtml(names["zh-CN"])} (${year})[tmdbid-${details.id}]')" title="复制">
+                            <span class="material-icons" style="font-size: 18px;">content_copy</span>
                         </button>
                     </div>
                 </div>
@@ -321,9 +317,8 @@ class TMDBAssistant {
                               (season) => `
                         <div class="rename-example">
                             <span><strong>${season.name}:</strong> Season ${String(season.season_number).padStart(2, "0")}</span>
-                            <button class="copy-btn" onclick="copyToClipboard('Season ${String(season.season_number).padStart(2, "0")}')">
-                                <span class="material-icons" style="font-size: 14px;">content_copy</span>
-                                复制
+                            <button class="copy-btn" onclick="copyToClipboard('Season ${String(season.season_number).padStart(2, "0")}')" title="复制">
+                                <span class="material-icons" style="font-size: 18px;">content_copy</span>
                             </button>
                         </div>
                     `,
@@ -346,9 +341,8 @@ class TMDBAssistant {
                         return `
                             <div class="rename-example">
                                 <span><strong>${langName}:</strong> ${name} S01E</span>
-                                <button class="copy-btn" onclick="copyToClipboard('${this.escapeHtml(name)} S01E')">
-                                    <span class="material-icons" style="font-size: 14px;">content_copy</span>
-                                    复制
+                                <button class="copy-btn" onclick="copyToClipboard('${this.escapeHtml(name)} S01E')" title="复制">
+                                    <span class="material-icons" style="font-size: 18px;">content_copy</span>
                                 </button>
                             </div>
                         `;
