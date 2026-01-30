@@ -12,7 +12,7 @@
 
 **操作步骤**：
 ```
-Vercel Dashboard → 选择项目 → Settings → General 
+Vercel Dashboard → 选择项目 → Settings → General
 → 找到 "Deployment Protection" 部分
 → Vercel Authentication → 确保为 OFF（关闭）
 ```
@@ -286,5 +286,5 @@ Settings → Git → Deploy Hooks
 
 ---
 
-**更新日期**: 2026-01-30  
+**更新日期**: 2026-01-30
 **版本**: 1.0.0
