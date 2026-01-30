@@ -1,3 +1,32 @@
 {
-  "version": 2
+  "version": 2,
+  "public": true,
+  "regions": ["hkg1", "sin1"],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300, s-maxage=300"
+        }
+      ]
+    }
+  ],
+  "functions": {
+    "api/*.js": {
+      "maxDuration": 10,
+      "memory": 1024,
+      "regions": ["hkg1", "sin1"]
+    }
+  }
 }

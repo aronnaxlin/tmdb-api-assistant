@@ -2,7 +2,7 @@
 
 一个基于 Vercel Serverless 的 TMDB (The Movie Database) 查询助手，专为 EMBY 媒体库文件重命名而设计。
 
-**✨ GitHub + Vercel 自动部署，开箱即用，无需配置 API Token！**
+**✨ GitHub + Vercel 自动部署，开箱即用，性能优化，快速访问！**
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/你的用户名/tmdb-api-assistant)
 
@@ -18,6 +18,37 @@
 - 🎨 **Material Design 3**：采用 Google Material You (Blue Aesthetic) 设计风格
 - 🚀 **自动 CI/CD**：推送代码到 GitHub 自动部署
 - 🔒 **安全**：API Token 隐藏在服务器端
+- ⚡ **性能优化**：亚太区域部署、智能缓存、DNS 预连接
+
+---
+
+## ⚠️ 常见问题快速解决
+
+### 问题：部署后需要登录 Vercel 才能访问？
+
+**解决方案**：
+1. 进入 [Vercel Dashboard](https://vercel.com/dashboard)
+2. 选择项目 → **Settings** → **General**
+3. 找到 **Deployment Protection** → **Vercel Authentication**
+4. 确保为 **OFF（关闭）**状态
+5. 重新部署
+
+详细说明见 [📘 访问权限指南](VERCEL_ACCESS_GUIDE.md)
+
+### 问题：访问速度很慢？
+
+**已优化**：
+- ✅ 使用亚太区域节点（香港、新加坡）
+- ✅ 启用智能缓存策略
+- ✅ DNS 预连接和资源预加载
+- ✅ 增加 Serverless 函数内存
+
+**快速部署优化版本**：
+```bash
+./deploy-optimized.sh
+```
+
+详细说明见 [📘 访问权限和性能指南](VERCEL_ACCESS_GUIDE.md)
 
 ---
 
@@ -29,19 +60,34 @@
 2. 使用 GitHub 登录 Vercel
 3. 配置环境变量 `TMDB_API_TOKEN`（[获取方式](https://www.themoviedb.org/settings/api)）
 4. 点击 Deploy
+5. **重要**：部署后检查并关闭 Vercel Authentication（见上方常见问题）
 
-完成！访问 Vercel 提供的域名即可使用。
+完成！访问 Vercel 提供的域名即可使用（无需登录）。
 
-### 方式 2: 手动部署
+### 方式 2: 优化部署脚本（性能最佳）
+
+```bash
+# 使用优化部署脚本
+./deploy-optimized.sh
+```
+
+此脚本会：
+- ✅ 自动检查环境
+- ✅ Git 提交并推送
+- ✅ 部署到 Vercel
+- ✅ 提供配置检查清单
+
+### 方式 3: 手动部署
 
 详见 [📖 快速开始指南 (QUICKSTART.md)](QUICKSTART.md)
 
-### 方式 3: Fork 后部署
+### 方式 4: Fork 后部署
 
 1. Fork 本仓库
 2. 在 [Vercel](https://vercel.com/new) 导入你的仓库
 3. 配置环境变量 `TMDB_API_TOKEN`
 4. 部署完成
+5. **关闭 Vercel Authentication**
 
 ---
 
@@ -49,6 +95,7 @@
 
 - 🚀 [快速开始](QUICKSTART.md) - 5分钟部署指南
 - 📚 [完整部署文档](DEPLOY.md) - 详细部署步骤、工作流程、常见问题
+- 🔓 [访问权限和性能优化](VERCEL_ACCESS_GUIDE.md) - 解决登录问题和速度优化
 
 ---
 
